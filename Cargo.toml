@@ -1,0 +1,13 @@
+[package]
+name = "plotters-imgui"
+version = "0.1.0"
+authors = ["Moritz Drexl <mdrexl@fastmail.fm>"]
+edition = "2018"
+
+[dependencies]
+plotters-backend = "0.3"
+imgui = "0.5"
+earcutr = { git = "https://github.com/dabreegster/earcutr", branch = "patch-1" }
+
+[dev-dependencies]
+plotters = { version = "0.3", default_features = false }
