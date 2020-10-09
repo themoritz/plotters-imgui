@@ -183,6 +183,15 @@ impl<'a> DrawingBackend for ImguiBackend<'a> {
         Ok(())
     }
 
+    fn estimate_text_size<S: BackendTextStyle>(
+        &self,
+        text: &str,
+        _font: &S,
+    ) -> Result<(u32, u32), DrawingErrorKind<Self::ErrorType>> {
+        let extents = self.ui.calc_text_size(&im_str!("{}", text), false, f32::MAX);
+        Ok((extents[0].round() as u32, extents[1].round() as u32))
+    }
+
     fn draw_text<S: BackendTextStyle>(
         &mut self,
         text: &str,
