@@ -1,0 +1,15 @@
+[package]
+name = "imgui-plotters-examples"
+version = "0.0.0"
+edition = "2018"
+authors = ["Moritz Drexl <mdrexl@fastmail.fm>"]
+publish = false
+
+[dev-dependencies]
+glium = { version = "0.27", default-features = true }
+imgui = "0.5"
+imgui-glium-renderer = "0.5"
+imgui-winit-support = "0.5"
+
+plotters = { version = "0.3", default-features = false, features = ["line_series"] }
+plotters-imgui = { path = "../" }
