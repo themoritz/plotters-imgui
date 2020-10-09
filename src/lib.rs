@@ -164,6 +164,25 @@ impl<'a> DrawingBackend for ImguiBackend<'a> {
         Ok(())
     }
 
+    fn draw_circle<S: BackendStyle>(
+        &mut self,
+        center: BackendCoord,
+        radius: u32,
+        style: &S,
+        fill: bool,
+    ) -> Result<(), DrawingErrorKind<Self::ErrorType>> {
+        self.draw_list
+            .add_circle(
+                imgui_point(center),
+                radius as f32,
+                imgui_color(style.color()),
+            )
+            .filled(fill)
+            .thickness(style.stroke_width() as f32)
+            .build();
+        Ok(())
+    }
+
     fn draw_text<S: BackendTextStyle>(
         &mut self,
         text: &str,
