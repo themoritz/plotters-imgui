@@ -208,9 +208,9 @@ impl<'a> DrawingBackend for ImguiBackend<'a> {
             HPos::Center => -extents[0] / 2.0,
         };
         let dy = match style.anchor().v_pos {
-            VPos::Top => extents[1],
-            VPos::Center => extents[1] / 2.0,
-            VPos::Bottom => 0.0,
+            VPos::Top => 0.0,
+            VPos::Center => -extents[1] / 2.0,
+            VPos::Bottom => -extents[1],
         };
 
         self.draw_list
