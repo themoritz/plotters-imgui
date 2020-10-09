@@ -1,7 +1,7 @@
 ## plotters-imgui
 
 An [imgui](https://github.com/Gekkio/imgui-rs) Rust backend for
-[plotters](https://github.com/38/plotters). Usefuly if you want to
+[plotters](https://github.com/38/plotters). Useful if you want to
 
 * animate your plotters charts and make them interactive, or
 * add plotting functionality to your imgui application.
