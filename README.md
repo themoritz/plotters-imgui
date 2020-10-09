@@ -42,8 +42,4 @@ chart
 ### Full Example
 
 For a compiling, interactive example, see the [examples](./examples)
-directory. From that directory, run the example with:
-
-```bash
-$ cargo run --example plot
-```
+directory.
