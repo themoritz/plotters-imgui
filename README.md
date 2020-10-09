@@ -1,9 +1,21 @@
-# plotters-imgui
+## plotters-imgui
 
-An [imgui](https://github.com/Gekkio/imgui-rs) backend for
-[plotters](https://github.com/38/plotters).
+An [imgui](https://github.com/Gekkio/imgui-rs) Rust backend for
+[plotters](https://github.com/38/plotters). Usefuly if you want to
 
-## Usage
+* animate your plotters charts and make them interactive, or
+* add plotting functionality to your imgui application.
+
+![](docs/plot.png)
+
+### Limitations
+
+The backend currently does not support different font styles and sizes
+since this doesn't have first class support in imgui. Therefore, chart
+captions, axis labels etc will always be rendered in the default font
+that you have configured for imgui.
+
+### Usage
 
 Just import `plotters_imgui::ImguiBackend` and use as a plotters backend:
 
@@ -27,13 +39,11 @@ chart
 
 ```
 
-## Full Example
+### Full Example
 
-![](docs/plot.png)
-
-For a compiling, interactive example, see the [examples](./examples) directory. Run with:
+For a compiling, interactive example, see the [examples](./examples)
+directory. From that directory, run the example with:
 
 ```bash
-$ cd examples
 $ cargo run --example plot
 ```
